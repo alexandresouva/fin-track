@@ -1,0 +1,13 @@
+<app-header (menuToggle)="toggleMenu()" />
+
+<mat-sidenav-container class="layout">
+  <mat-sidenav mode="side" [opened]="isMenuOpen()">
+    <app-sidenav />
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <main class="content">
+      <ng-content />
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

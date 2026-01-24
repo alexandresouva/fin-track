@@ -1,0 +1,18 @@
+:host {
+  --layout-padding: 24px;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+
+mat-sidenav {
+  width: fit-content;
+  padding: var(--layout-padding);
+  background-color: var(--mat-sys-surface-container-low);
+}
+
+.content {
+  padding: var(--layout-padding);
+  height: 100%;
+}
