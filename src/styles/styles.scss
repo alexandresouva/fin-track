@@ -1,5 +1,6 @@
 @use '@angular/material' as mat;
-@use 'styles/theme-colors' as theme;
+@use './material/theme-colors' as theme;
+@use './material/toolbar.scss';
 
 html {
   @include mat.theme(
