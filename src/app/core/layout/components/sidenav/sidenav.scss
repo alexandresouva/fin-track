@@ -1,0 +1,43 @@
+@use '@angular/material' as mat;
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  gap: 4px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    height: 44px;
+    padding: 0 12px;
+
+    border-radius: 8px;
+    font-weight: 500;
+    color: var(--mat-sys-on-surface);
+    text-decoration: none;
+
+    transition:
+      background-color 150ms ease,
+      color 150ms ease;
+
+    &:hover {
+      background-color: var(--mat-sys-surface-container-high);
+    }
+
+    &--active {
+      background-color: var(--mat-sys-secondary-container);
+      color: var(--mat-sys-on-secondary-container);
+
+      mat-icon {
+        color: inherit;
+      }
+    }
+
+    mat-icon {
+      font-size: 24px;
+    }
+  }
+}
