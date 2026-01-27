@@ -72,6 +72,7 @@
           "builder": "@angular/build:karma",
           "options": {
             "codeCoverage": true,
+            "codeCoverageExclude": ["src/app/testing/**"],
             "karmaConfig": "karma.conf.cjs",
             "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
