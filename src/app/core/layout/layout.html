@@ -1,8 +1,8 @@
-<app-header (menuToggle)="toggleMenu()" />
+<app-header data-testid="header" (menuToggle)="toggleMenu()" />
 
 <mat-sidenav-container class="layout">
-  <mat-sidenav mode="side" [opened]="isMenuOpen()">
-    <app-sidenav />
+  <mat-sidenav data-testid="sidenav" mode="side" [opened]="isMenuOpen()">
+    <app-sidenav data-testid="app-sidenav" />
   </mat-sidenav>
 
   <mat-sidenav-content>
