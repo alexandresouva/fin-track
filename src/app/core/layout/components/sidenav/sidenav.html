@@ -2,6 +2,7 @@
   @for (item of menuItems; track item.route) {
     <a
       class="menu__item"
+      data-testid="sidenav-menu-item"
       mat-button
       routerLinkActive="menu__item--active"
       [routerLink]="item.route"
