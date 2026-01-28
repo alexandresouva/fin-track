@@ -1,1 +1,9 @@
-<p>home works!</p>
+<div class="cards">
+  @for (card of balanceData(); track $index) {
+    <app-balance-card
+      [amount]="card.amount"
+      [header]="card.header"
+      [type]="card.type"
+    />
+  }
+</div>
