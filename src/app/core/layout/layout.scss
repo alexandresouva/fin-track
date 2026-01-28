@@ -1,6 +1,4 @@
 :host {
-  --layout-padding: 24px;
-
   display: grid;
   grid-template-rows: auto 1fr;
   height: 100vh;
@@ -8,11 +6,11 @@
 
 mat-sidenav {
   width: fit-content;
-  padding: var(--layout-padding);
+  padding: var(--space-7);
   background-color: var(--mat-sys-surface-container-low);
 }
 
 .content {
-  padding: var(--layout-padding);
+  padding: var(--space-7);
   height: 100%;
 }
