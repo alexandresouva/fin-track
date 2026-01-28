@@ -1,0 +1,10 @@
+$border-1: 1px;
+$border-4: 4px;
+
+$border-width-subtle: $border-1;
+$border-width-accent: $border-4;
+
+:root {
+  --border-width-subtle: #{$border-width-subtle};
+  --border-width-accent: #{$border-width-accent};
+}
