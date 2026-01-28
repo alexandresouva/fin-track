@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { MatGridListModule } from '@angular/material/grid-list';
 
-import { BalanceCard } from './components/balance-card/balance-card';
+import { Balance } from './components/balance/balance';
 import { BalanceCardData } from './models/balance-card.model';
 
 @Component({
   selector: 'app-home',
-  imports: [MatGridListModule, BalanceCard],
+  imports: [MatGridListModule, Balance],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
