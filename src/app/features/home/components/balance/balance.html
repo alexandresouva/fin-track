@@ -1,9 +1,22 @@
 <div class="cards">
-  <app-balance-card header="Incomes" type="income" [amount]="totalIncomes()" />
   <app-balance-card
+    data-testid="balance-card-income"
+    header="Incomes"
+    type="income"
+    [amount]="totalIncomes()"
+  />
+
+  <app-balance-card
+    data-testid="balance-card-expenses"
     header="Expenses"
     type="expenses"
     [amount]="totalExpenses()"
   />
-  <app-balance-card header="Balance" type="balance" [amount]="finalBalance()" />
+
+  <app-balance-card
+    data-testid="balance-card-balance"
+    header="Balance"
+    type="balance"
+    [amount]="finalBalance()"
+  />
 </div>

@@ -16,13 +16,13 @@ import { BalanceCard } from './balance-card/balance-card';
 export class Balance {
   readonly transactions = input<Transaction[]>([]);
 
-  readonly totalIncomes = computed<number>(() =>
+  protected readonly totalIncomes = computed<number>(() =>
     this.sumTransactions(this.transactions(), 'income')
   );
-  readonly totalExpenses = computed<number>(() =>
+  protected readonly totalExpenses = computed<number>(() =>
     this.sumTransactions(this.transactions(), 'expenses')
   );
-  readonly finalBalance = computed<number>(
+  protected readonly finalBalance = computed<number>(
     () => this.totalIncomes() - this.totalExpenses()
   );
 
