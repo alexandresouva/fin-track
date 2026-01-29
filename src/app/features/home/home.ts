@@ -2,7 +2,7 @@ import { Component, signal } from '@angular/core';
 import { MatGridListModule } from '@angular/material/grid-list';
 
 import { Balance } from './components/balance/balance';
-import { BalanceCardData } from './models/balance-card.model';
+import { Transaction } from './models/transaction.model';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +11,10 @@ import { BalanceCardData } from './models/balance-card.model';
   styleUrl: './home.scss'
 })
 export class Home {
-  protected readonly balanceData = signal<BalanceCardData[]>([
-    { header: 'Income', amount: 5000, type: 'income' },
-    { header: 'Expenses', amount: 2000, type: 'expenses' },
-    { header: 'Balance', amount: 2003000, type: 'balance' }
+  protected readonly transactions = signal<Transaction[]>([
+    { type: 'income', value: 1000 },
+    { type: 'expenses', value: 500 },
+    { type: 'expenses', value: 2000 },
+    { type: 'income', value: 300 }
   ]);
 }

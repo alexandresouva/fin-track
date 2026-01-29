@@ -1,9 +1,9 @@
 <div class="cards">
-  @for (card of balanceData(); track $index) {
-    <app-balance-card
-      [amount]="card.amount"
-      [header]="card.header"
-      [type]="card.type"
-    />
-  }
+  <app-balance-card header="Incomes" type="income" [amount]="totalIncomes()" />
+  <app-balance-card
+    header="Expenses"
+    type="expenses"
+    [amount]="totalExpenses()"
+  />
+  <app-balance-card header="Balance" type="balance" [amount]="finalBalance()" />
 </div>

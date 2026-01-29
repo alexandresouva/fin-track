@@ -2,8 +2,6 @@ import { CurrencyPipe } from '@angular/common';
 import { Component, input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 
-import { BalanceCardType } from '@features/home/models/balance-card.model';
-
 @Component({
   selector: 'app-balance-card',
   imports: [MatCardModule, CurrencyPipe],
@@ -13,5 +11,5 @@ import { BalanceCardType } from '@features/home/models/balance-card.model';
 export class BalanceCard {
   readonly header = input.required<string>();
   readonly amount = input.required<number>();
-  readonly type = input.required<BalanceCardType>();
+  readonly type = input.required<'income' | 'expenses' | 'balance'>();
 }
