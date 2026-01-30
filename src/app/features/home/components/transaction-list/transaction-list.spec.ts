@@ -1,22 +1,26 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
+
+import { Transaction } from '@features/home/models/transaction.model';
+import { transactionsMock } from '@testing/mock-data/transactions.mock';
 
 import { TransactionList } from './transaction-list';
 
-describe('TransactionList', () => {
-  let component: TransactionList;
-  let fixture: ComponentFixture<TransactionList>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [TransactionList]
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(TransactionList);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+function setup(transactions: Transaction[] = transactionsMock) {
+  TestBed.configureTestingModule({
+    imports: [TransactionList]
   });
 
+  const fixture = TestBed.createComponent(TransactionList);
+  const component = fixture.componentInstance;
+  fixture.componentRef.setInput('transactions', transactions);
+  fixture.detectChanges();
+
+  return { component, fixture };
+}
+
+describe('TransactionList', () => {
   it('should create', () => {
+    const { component } = setup();
     expect(component).toBeTruthy();
   });
 });
