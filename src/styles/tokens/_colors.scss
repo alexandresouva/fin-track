@@ -1,12 +1,46 @@
 :root {
-  /* Neutral */
+  /* =========================
+     Neutral / Surface
+    ========================= */
   --color-bg: #ffffff;
-  --color-text-primary: #111827;
-  --color-text-secondary: #6b7280;
-  --color-border-subtle: rgba(0, 0, 0, 0.06);
+  --color-bg-hover: #f9fafb;
 
-  /* Accents */
-  --color-income: #22c55e;
-  --color-expenses: #ef4444;
-  --color-balance: #3b82f6;
+  --color-surface: #ffffff;
+  --color-surface-hover: #f3f4f6;
+
+  /* =========================
+     Text
+     ========================= */
+  --color-text-primary: #111827; /* slate-900 */
+  --color-text-secondary: #6b7280; /* slate-500 */
+  --color-text-muted: #9ca3af; /* slate-400 */
+
+  /* =========================
+     Borders & Shadows
+     ========================= */
+  --color-border-subtle: rgba(0, 0, 0, 0.06);
+  --color-border-strong: rgba(0, 0, 0, 0.12);
+
+  --border-width-subtle: 1px;
+  --border-width-accent: 4px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+
+  /* =========================
+     Accents / Semantic
+     ========================= */
+  --color-income: #22c55e; /* green-500 */
+  --color-expenses: #ef4444; /* red-500 */
+  --color-balance: #3b82f6; /* blue-500 */
+
+  /* Soft / hover states */
+  --color-income-soft: rgba(34, 197, 94, 0.12);
+  --color-expenses-soft: rgba(239, 68, 68, 0.12);
+  --color-balance-soft: rgba(59, 130, 246, 0.12);
+
+  /* =========================
+     Status / Danger
+     ========================= */
+  --color-danger: #ef4444;
+  --color-danger-soft: rgba(239, 68, 68, 0.15);
 }
