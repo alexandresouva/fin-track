@@ -1,6 +1,9 @@
 export type TransactionType = 'income' | 'expenses';
 
-export type Transaction = {
-  type: TransactionType;
+export interface Transaction {
+  id: string;
+  title: string;
+  date: string;
   value: number;
-};
+  type: TransactionType;
+}

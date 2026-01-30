@@ -1,0 +1,117 @@
+.transaction-item {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr auto;
+  align-items: center;
+  gap: var(--space-6);
+
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-md);
+
+  background-color: var(--color-bg);
+  border: var(--border-width-subtle) solid var(--color-border-subtle);
+  border-left: var(--border-width-accent) solid transparent;
+
+  transition:
+    background-color 150ms ease,
+    box-shadow 150ms ease,
+    transform 120ms ease;
+
+  &:hover {
+    background-color: var(--color-bg-hover);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-1px);
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space-1);
+  }
+
+  &__type {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  &__date {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    min-width: 0;
+  }
+
+  &__label {
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-secondary);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__amount {
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-semibold);
+  }
+
+  &__actions {
+    display: flex;
+    gap: var(--space-1);
+  }
+
+  &__action {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: outset;
+
+    color: var(--color-text-secondary);
+    background: transparent;
+    cursor: pointer;
+
+    transition:
+      background-color 120ms ease,
+      color 120ms ease,
+      transform 120ms ease;
+
+    &:hover {
+      background-color: var(--color-surface-hover);
+      color: var(--color-text-primary);
+      transform: scale(1.05);
+    }
+
+    &--edit:hover {
+      border-color: var(--color-text-secondary);
+    }
+
+    &--delete:hover {
+      background-color: var(--color-danger-soft);
+      color: var(--color-danger);
+      border-color: var(--color-danger);
+    }
+  }
+
+  &--income {
+    border-left-color: var(--color-income);
+
+    .transaction-item__type {
+      color: var(--color-income);
+    }
+  }
+
+  &--expenses {
+    border-left-color: var(--color-expenses);
+
+    .transaction-item__type {
+      color: var(--color-expenses);
+    }
+  }
+}

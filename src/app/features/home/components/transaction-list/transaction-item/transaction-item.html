@@ -1,0 +1,47 @@
+<div
+  class="transaction-item transaction-item--{{ transaction().type }}"
+  data-testid="transaction-item"
+>
+  <div class="transaction-item__left">
+    <span class="transaction-item__type" data-testid="transaction-item-type">
+      {{ transaction().type === 'income' ? 'Income' : 'Expense' }}
+    </span>
+
+    <span class="transaction-item__date" data-testid="transaction-item-date">
+      {{ transaction().date | date: 'mediumDate' }}
+    </span>
+  </div>
+
+  <div class="transaction-item__center">
+    <span class="transaction-item__label" data-testid="transaction-item-label">
+      {{ transaction().title }}
+    </span>
+
+    <span
+      class="transaction-item__amount"
+      data-testid="transaction-item-amount"
+    >
+      {{ transaction().value | currency }}
+    </span>
+  </div>
+
+  <div class="transaction-item__actions">
+    <button
+      aria-label="Edit transaction"
+      class="transaction-item__action transaction-item__action--edit"
+      mat-icon-button
+      type="button"
+    >
+      <mat-icon>edit</mat-icon>
+    </button>
+
+    <button
+      aria-label="Remove transaction"
+      class="transaction-item__action transaction-item__action--delete"
+      mat-icon-button
+      type="button"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>
