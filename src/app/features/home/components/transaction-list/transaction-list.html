@@ -1,0 +1,11 @@
+<section class="transaction-list">
+  <h2 class="transaction-list__title">Transactions</h2>
+
+  <ul class="transaction-list__items">
+    @for (transaction of transactions(); track transaction.id) {
+      <li class="transaction-list__item">
+        <app-transaction-item [transaction]="transaction" />
+      </li>
+    }
+  </ul>
+</section>
